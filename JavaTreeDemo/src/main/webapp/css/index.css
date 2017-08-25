@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+[class*="output"] {
+    float: left;
+    padding: 15px;
+}
+
+/* For mobile phones: */
+[class*="output"] {
+    width: 100%;
+}
+
+.header {
+    font-size: 30px;
+    text-align:center;
+}
+
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .outputColumn {
+        width:50%;
+    }
+
+    .header {
+        font-size: 50px;
+    }
+}
