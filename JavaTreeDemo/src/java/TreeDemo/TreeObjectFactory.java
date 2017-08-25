@@ -83,7 +83,6 @@ public class TreeObjectFactory {
             colorFormat.add("orange");
             colorFormat.add("orange");
             colorFormat.add("orange");
-            // Interpret all non-specialized color configurations as default, instead of requiring a specific string
         } else if (configuration == "none_orange") {
             colorFormat.add("red");
             colorFormat.add("blue");
@@ -96,6 +95,7 @@ public class TreeObjectFactory {
             colorFormat.add("red");
             colorFormat.add("blue");
             colorFormat.add("red");
+        // Interpret all non-specialized color configurations as default, instead of requiring a specific string
         } else {
             colorFormat.add("red");
             colorFormat.add("blue");

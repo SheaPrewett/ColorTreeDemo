@@ -17,17 +17,20 @@ import java.util.ArrayList;
 )
 public class HomePageServlet extends HttpServlet{
 
+    //Handles GET Requests
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        // Retrieve the test results from the demo method
         TreeDemo demo = new TreeDemo();
         ArrayList<String> outputList = demo.runDemo();
 
+        // Set each result String to an attribute for JSTL to load
         request.setAttribute("defaultResults", outputList.get(0));
         request.setAttribute("allOrangeResults", outputList.get(1));
         request.setAttribute("noOrangeResults", outputList.get(2));
 
-        // Forward to home page with processed name data
+        // Forward to home page with test results
         RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
         dispatcher.forward(request, response);
 

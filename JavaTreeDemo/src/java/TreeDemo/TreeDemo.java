@@ -11,6 +11,7 @@ public class TreeDemo {
     // kind of recursion is kind of throwing me for a loop
     private String resultsCache;
 
+    // Demo method to setup and run the tests, returning the results.
     public ArrayList<String> runDemo() {
         ArrayList<String> testResults = new ArrayList<String>();
 
@@ -31,6 +32,7 @@ public class TreeDemo {
         return testResults;
     }
 
+    // Check the parent object for the color orange, then start orangeRecursion's recursive navigation
     public String findOrange(TreeObject treeObject) {
         resultsCache = "";
         int position = 1;
@@ -49,6 +51,7 @@ public class TreeDemo {
         return result;
     }
 
+    // Recursively navigate to the end of a given series of branches, output any orange objects found along the way
     public void orangeRecursion(int node, ArrayList<TreeObject> children, int extra) {
 
         // Probably redundant check, but better safe than sorry
@@ -66,17 +69,17 @@ public class TreeDemo {
                 }
             }
         }
-
     }
 
+    // Orange color found; add output with relative location to the output string for this test
     public String printColorData(int position, int node, String color, int extra) {
         String output = "Color " + color + " found at node " + node + ", branch number " + extra + ", position " + position + ".<br/>";
-        System.out.println(output);
         return output;
     }
 
+    // Hard-coded tree navigation for debug/setup purposes
     public void debugWithHardCodedData(TreeObject treeObject) {
-        // Hard-coded tree navigation for debug/setup purposes
+        
         TreeObject object2A = treeObject.getChildren().get(0);
         TreeObject object2B = treeObject.getChildren().get(1);
         TreeObject object3AA = object2A.getChildren().get(0);
